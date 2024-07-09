@@ -34,6 +34,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
     software-properties-common -y \
     && rm -r /var/lib/apt/lists/*
 
+RUN pip3 install -U catkin_tools
+
 # Sourcing ROS on each /root/.bashrc
 RUN echo "source /opt/ros/noetic/setup.bash" >> /root/.bashrc
 RUN echo "source /ws/vanttec_uuv/devel/setup.bash" >> /root/.bashrc

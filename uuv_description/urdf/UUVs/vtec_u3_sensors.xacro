@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="$(find uuv_gazebo)/plugins/uuv_sensor_plugins/uuv_sensor_ros_plugins/urdf/sensor_snippets.xacro"/>
+  <xacro:include filename="$(find uuv_description)/lib/uuv_sensor_plugins_ros/urdf/sensor_snippets.xacro"/>
 
   <!-- Sensor macros in the package uuv_sensor_ros_plugins/urdf -->
 
@@ -10,10 +10,11 @@
     -->
 
     <!-- Realsense R200 Camera -->
-    <xacro:realsense_camera namespace="${namespace}" parent_link="${namespace}_base_link" suffix="front">
+    <xacro:realsense_camera namespace="${namespace}" parent_link="${namespace}_base_link" suffix="Realsense200">
       <origin xyz="0 0 0.18" rpy="0 0 1.57"/>
     </xacro:realsense_camera>
 
+<!-- 
     <gazebo>
       <plugin name="pose_3d_plugin" filename="libgazebo_ros_p3d.so">
       <robotNamespace>${namespace}</robotNamespace>
@@ -24,6 +25,7 @@
       <updateRate>30</updateRate>
       </plugin>
     </gazebo>
+-->
 
   </xacro:macro>
 

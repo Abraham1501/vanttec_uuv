@@ -76,3 +76,12 @@ docker exec -it uuv /bin/bash
 ```
 
 **Is your already-created container not running? Try using ```docker start uuv```.**
+
+
+## Project DAVE: https://field-robotics-lab.github.io/dave.doc/
+Inside the docker container use:
+```Shell
+pip3 install -U catkin_tools
+cd && cd ../ws/vanttec_uuv/
+catkin_build
+```
